@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SkillSwap - Exchange Skills</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#4338ca',
+              'primary-hover': '#3730a3',
+              secondary: '#059669',
+              'secondary-hover': '#047857',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      /* Classy Background & Base Styling */
+      body {
+        background-color: #f3f4f6; /* Slightly darker than pure white for a softer UI */
+        overflow-x: hidden;
+      }
+
+      /* Page Fade-In Animation */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(15px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .page-fade-in {
+        animation: fadeIn 0.6s ease-out forwards;
+      }
+
+      /* Staggered Animation for child elements */
+      .stagger-children > * {
+        opacity: 0;
+        animation: fadeIn 0.6s ease-out forwards;
+      }
+      /* Creates a delay for each child */
+      .stagger-children > *:nth-child(1) { animation-delay: 0.1s; }
+      .stagger-children > *:nth-child(2) { animation-delay: 0.15s; }
+      .stagger-children > *:nth-child(3) { animation-delay: 0.2s; }
+      .stagger-children > *:nth-child(4) { animation-delay: 0.25s; }
+      .stagger-children > *:nth-child(5) { animation-delay: 0.3s; }
+      .stagger-children > *:nth-child(6) { animation-delay: 0.35s; }
+      .stagger-children > *:nth-child(7) { animation-delay: 0.4s; }
+      .stagger-children > *:nth-child(8) { animation-delay: 0.45s; }
+      .stagger-children > *:nth-child(9) { animation-delay: 0.5s; }
+      .stagger-children > *:nth-child(10) { animation-delay: 0.55s; }
+      .stagger-children > *:nth-child(11) { animation-delay: 0.6s; }
+      .stagger-children > *:nth-child(12) { animation-delay: 0.65s; }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react-router-dom": "https://aistudiocdn.com/react-router-dom@^7.9.5",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
